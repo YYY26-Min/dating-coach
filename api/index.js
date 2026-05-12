@@ -74,7 +74,7 @@ const PROMPT = `你是一个相亲策略顾问，基于心理学和社会学研�
 Knapp关系阶段、社会渗透理论、Gottman情感竞标与四骑士、相互依赖理论、《亲密关系》。
 输出语言跟用户输入一致。`;
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // GET 请求返回页面
   if (req.method === "GET") {
     return res.status(200).setHeader("Content-Type", "text/html; charset=utf-8").send(HTML);
