@@ -1,1 +1,17 @@
-{"buildCommand":"npx vercel@53.3.1 build"} 
+
+// 检查你的 vercel.json 文件
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.js"
+    }
+  ]
+}
