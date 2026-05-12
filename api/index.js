@@ -84,7 +84,7 @@ module.exports = async function handler(req, res) {
       })
     });
     var d = await r.json();
-    var text = d.choices?.[0]?.message?.content || "分析失败";
+    var text = (d.choices && d.choices[0] && d.choices[0].message && d.choices[0].message.content) || "分析失败";
     return res.status(200).json({ result: text });
   } catch (e) {
     return res.status(500).json({ error: "服务异常" });

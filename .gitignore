@@ -1,0 +1,9 @@
+.env
+.env.local
+.env*.local
+相亲分析.html
+node_modules/
+.next/
+dist/
+build/
+.vercel
